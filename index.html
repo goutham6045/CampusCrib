@@ -10,7 +10,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./favicon_2.svg" type="image/svg+xml">
 
   <!-- 
     - custom css link
@@ -99,8 +99,8 @@
       <div class="container">
 
         <a href="#" class="logo">
-          <!--<img src="./assets/images/logo.png" alt="Homeverse logo">-->
-          <h2>Campus Crib</h2>
+          <img src="./assets/images/logo.png" alt="Homeverse logo">
+          <!-- <h2>Campus Crib</h2> -->
         </a>
 
         <nav class="navbar" data-navbar>
@@ -157,11 +157,17 @@
             <span>Search</span>
           </button>
 
-          <button class="header-bottom-actions-btn" aria-label="Profile">
+          <button class="header-bottom-actions-btn" aria-label="Profile" onclick="redirectToPage()">
             <ion-icon name="person-outline"></ion-icon>
 
             <span>Profile</span>
           </button>
+          <script>
+            function redirectToPage() {
+              window.location.href = "login-page.html";
+            }
+          </script>
+      
 
           <button class="header-bottom-actions-btn" aria-label="Cart">
             <ion-icon name="cart-outline"></ion-icon>
@@ -201,16 +207,24 @@
             <p class="hero-subtitle">
               <ion-icon name="home"></ion-icon>
 
-              <span>Real Estate Agency</span>
+              <span>UF Student Housing</span>
             </p>
 
-            <h2 class="h1 hero-title">Find Your Dream House By Us</h2>
+            <h2 class="h1 hero-title">Housing made Easy!</h2>
 
+            <p class="hero-text" style="text-align: justify;">
+              Welcome to Campucrib.com - your go-to source for 
+              affordable and comfortable housing options during college.
+               Browse our properties, filter by location and amenities, 
+               and find your perfect home away from home today. With 
+               easy-to-use search tools and exceptional customer service,
+                we make finding the right housing option stress-free.
+            </p>
+
+            <button class="btn">Fill the form</button>
             <p class="hero-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.
+              Just fill the form and we will find the perfect home for you.
             </p>
-
-            <button class="btn">Make An Enquiry</button>
 
           </div>
 
