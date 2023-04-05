@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Housing Search</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+			padding: 20px;
+		}
+
+		h1 {
+			text-align: center;
+			color: #4285f4;
+			margin-bottom: 20px;
+		}
+
+		form {
+			background-color: #fff;
+			border-radius: 5px;
+			padding: 20px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		label {
+			font-weight: bold;
+			margin-top: 10px;
+			display: block;
+			color: #666;
+		}
+
+		input[type="text"],
+		input[type="number"],
+		select {
+			width: 100%;
+			padding: 10px 15px;
+			border-radius: 5px;
+			border: none;
+			margin-top: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			font-size: 16px;
+			color: #333;
+			background-color: #f5f5f5;
+			transition: all 0.3s ease-in-out;
+		}
+
+		select {
+			margin-bottom: 10px;
+		}
+
+		input[type="text"]:focus,
+		input[type="number"]:focus,
+		select:focus {
+			outline: none;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+			background-color: #fff;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			margin-top: 5px;
+			display: flex;
+			align-items: center;
+			color: #666;
+			font-size: 16px;
+		}
+
+		input[type="checkbox"] {
+			margin-right: 5px;
+			cursor: pointer;
+		}
+
+		input[type="submit"] {
+			margin-top: 20px;
+			padding: 10px 20px;
+			background-color: #4285f4;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			text-transform: uppercase;
+			transition: all 0.3s ease-in-out;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3367d6;
+		}
+
+		input[type="submit"]:focus {
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Student Housing Search</h1>
+	<form>
+		<label for="university">University:</label>
+		<input type="text" id="university" name="university" placeholder="Enter your university name" required>
+
+		<label for="budget">Monthly budget:</label>
+		<input type="number" id="budget" name="budget" placeholder="Enter your monthly budget" min="0" required>
+
+		<label for="bedrooms">Number of bedrooms:</label>
+		<select id="bedrooms" name="bedrooms">
+			<option value="0">Studio/1</option>
+			<option value="1">1</option>
+            <option value="2">2</option>
+	    <option value="3">3 or more</option>
+	  </select>
+	  
+	  <label for="amenities">Preferred amenities:</label>
+	  <ul id="amenities">
+	    <li><input type="checkbox" name="amenity" value="wifi"> Free Wi-Fi</li>
+	    <li><input type="checkbox" name="amenity" value="laundry"> On-site laundry</li>
+	    <li><input type="checkbox" name="amenity" value="gym"> Fitness center</li>
+	    <li><input type="checkbox" name="amenity" value="parking"> Parking</li>
+	  </ul>
+	  
+	  <input type="submit" value="Find Housing">
+	</form>
+</body>
+</html>
+
