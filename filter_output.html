@@ -25,6 +25,72 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+
+
+    <title>Multiple Filter Example</title>
+	<style>
+		/* CSS for filter container */
+		.filter-container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		/* CSS for filter items */
+		.filter-item {
+			display: flex;
+			align-items: center;
+			margin-right: 20px;
+		}
+
+		/* CSS for button */
+		.filter-button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 8px 16px;
+			border: none;
+			cursor: pointer;
+			margin-left: 20px;
+			border-radius: 4px;
+		}
+
+		/* CSS for dropdown menu */
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			z-index: 1;
+			min-width: 160px;
+			padding: 12px 16px;
+			background-color: #f1f1f1;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			border-radius: 4px;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		/* CSS for checkbox */
+		.checkbox-container {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+
+		.checkbox-label {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	</style>
+
+
 </head>
 
 <body>
@@ -131,12 +197,9 @@
               <li>
                 <a href="off-campus.html" class="navbar-link" data-nav-link>Off-Campus Options</a>
               </li>
-
               <li>
                 <a href="chatgpt.html" class="navbar-link" data-nav-link>Open AI GPT</a>
               </li>
-
-              
 
              
 
@@ -146,10 +209,12 @@
         </nav>
 
         
+
       </div>
     </div>
 
   </header>
+
 
          <!-- 
         - #PROPERTY
@@ -158,9 +223,9 @@
       <section class="property" id="property">
         <div class="container">
 
-          <p class="section-subtitle">Off-Campus Options</p>
+          <p class="section-subtitle">Filter Results</p>
 
-          <h2 class="h2 section-title">Welcome to Off Campus Student Life!!! </h2>
+          <h2 class="h2 section-title">You are just one step away in finding Desired house</h2>
 
           <ul class="property-list has-scrollbar">
 
@@ -283,124 +348,122 @@
             </li>
 
             <li>
-              <div class="property-card">
-
-                <figure class="card-banner">
-
-                  <a href="#">
-                    <img src="./assets/images/greenwhich.png" alt="Modern Apartments" class="w-100">
-                  </a>
-
-                  <div class="card-badge orange">Budget Friendly</div>
-
-                  <div class="banner-actions">
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="location"></ion-icon>
-
-                      <address>3515 SW 39th Boulevard,
-                        Gainesville</address>
-                    </button>
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="camera"></ion-icon>
-
-                      <span>4</span>
-                    </button>
-
-                    <button class="banner-actions-btn">
-                      <ion-icon name="film"></ion-icon>
-
-                      <span>2</span>
-                    </button>
-
-                  </div>
-
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-price">
-                    <strong>$2200</strong>/Month
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Greenwich Green Apartments</a>
-                  </h3>
-
-                  <p class="card-text">
-                    Welcome to Greenwich Green where we offer a superlative living experience with a wide array of amenities
-                  </p>
-
-                  <ul class="card-list">
-
-                    <li class="card-item">
-                      <strong>3</strong>
-
-                      <ion-icon name="bed-outline"></ion-icon>
-
-                      <span>Bedrooms</span>
-                    </li>
-
-                    <li class="card-item">
-                      <strong>2</strong>
-
-                      <ion-icon name="man-outline"></ion-icon>
-
-                      <span>Bathrooms</span>
-                    </li>
-
-                    <li class="card-item">
-                      <strong>3450</strong>
-
-                      <ion-icon name="square-outline"></ion-icon>
-
-                      <span>Square Ft</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-                <div class="card-footer">
-
-                  <div class="card-author">
-
-                    <figure class="author-avatar">
-                      <img src="./assets/images/author.jpg" alt="William Seklo" class="w-100">
-                    </figure>
-
-                    <div>
-                      <p class="author-name">
-                        <a href="#">Tim Henry</a>
-                      </p>
-
-                      <p class="author-title">Estate Agents</p>
+                <div class="property-card">
+  
+                  <figure class="card-banner">
+  
+                    <a href="#">
+                      <img src="./assets/images/property-2.jpg" alt="Modern Apartments" class="w-100">
+                    </a>
+  
+                    <div class="card-badge orange">Budget Friendly</div>
+  
+                    <div class="banner-actions">
+  
+                      <button class="banner-actions-btn">
+                        <ion-icon name="location"></ion-icon>
+  
+                        <address>Archer Road, Gainesville</address>
+                      </button>
+  
+                      <button class="banner-actions-btn">
+                        <ion-icon name="camera"></ion-icon>
+  
+                        <span>4</span>
+                      </button>
+  
+                      <button class="banner-actions-btn">
+                        <ion-icon name="film"></ion-icon>
+  
+                        <span>2</span>
+                      </button>
+  
                     </div>
-
+  
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <div class="card-price">
+                      <strong>$3,500</strong>/Month
+                    </div>
+  
+                    <h3 class="h3 card-title">
+                      <a href="#">THE CONTINUUM Apartments</a>
+                    </h3>
+  
+                    <p class="card-text">
+                      The Continuum's is the official graduate and professional housing partner of the University of Florida.
+                    </p>
+  
+                    <ul class="card-list">
+  
+                      <li class="card-item">
+                        <strong>3</strong>
+  
+                        <ion-icon name="bed-outline"></ion-icon>
+  
+                        <span>Bedrooms</span>
+                      </li>
+  
+                      <li class="card-item">
+                        <strong>2</strong>
+  
+                        <ion-icon name="man-outline"></ion-icon>
+  
+                        <span>Bathrooms</span>
+                      </li>
+  
+                      <li class="card-item">
+                        <strong>3450</strong>
+  
+                        <ion-icon name="square-outline"></ion-icon>
+  
+                        <span>Square Ft</span>
+                      </li>
+  
+                    </ul>
+  
                   </div>
-
-                  <div class="card-footer-actions">
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="resize-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-
-                    <button class="card-footer-actions-btn">
-                      <ion-icon name="add-circle-outline"></ion-icon>
-                    </button>
-
+  
+                  <div class="card-footer">
+  
+                    <div class="card-author">
+  
+                      <figure class="author-avatar">
+                        <img src="./assets/images/author.jpg" alt="William Seklo" class="w-100">
+                      </figure>
+  
+                      <div>
+                        <p class="author-name">
+                          <a href="#">Tim Henry</a>
+                        </p>
+  
+                        <p class="author-title">Estate Agents</p>
+                      </div>
+  
+                    </div>
+  
+                    <div class="card-footer-actions">
+  
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="resize-outline"></ion-icon>
+                      </button>
+  
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="heart-outline"></ion-icon>
+                      </button>
+  
+                      <button class="card-footer-actions-btn">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                      </button>
+  
+                    </div>
+  
                   </div>
-
+  
                 </div>
-
-              </div>
-            </li>
-
+              </li>
             <li>
               <div class="property-card">
 

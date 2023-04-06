@@ -1,66 +1,179 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/filters.css">
+	<title>Student Housing Search</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #69b8b4;
+			padding: 20px;
+		}
+
+		h1 {
+			text-align: center;
+			color: #000000;
+			margin-bottom: 20px;
+		}
+
+		form {
+			background-color: #fff;
+			border-radius: 5px;
+			padding: 20px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		label {
+			font-weight: bold;
+			margin-top: 10px;
+			display: block;
+			color: #666;
+		}
+
+		input[type="text"],
+		input[type="number"],
+		select {
+			width: 100%;
+			padding: 10px 15px;
+			border-radius: 5px;
+			border: none;
+			margin-top: 5px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			font-size: 16px;
+			color: #333;
+			background-color: #f5f5f5;
+			transition: all 0.3s ease-in-out;
+		}
+
+		select {
+			margin-bottom: 10px;
+		}
+
+		input[type="text"]:focus,
+		input[type="number"]:focus,
+		select:focus {
+			outline: none;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+			background-color: #fff;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		li {
+			margin-top: 5px;
+			display: flex;
+			align-items: center;
+			color: #666;
+			font-size: 16px;
+		}
+
+		input[type="checkbox"] {
+			margin-right: 5px;
+			cursor: pointer;
+		}
+
+		input[type="submit"] {
+			margin-top: 20px;
+			padding: 10px 20px;
+			background-color: #4285f4;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			text-transform: uppercase;
+			transition: all 0.3s ease-in-out;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3367d6;
+		}
+
+		input[type="submit"]:focus {
+			outline: none;
+		}
+	</style>
 </head>
 <body>
-    <div class="filter-options">
-        <label for="university">On-Campus or Off-Campus:</label>
-        <select id="university" name="university">
-          <option value="">Select an option</option>
-          <option value="on-campus">On-Campus</option>
-          <option value="off-campus">Off-Campus</option>
-        </select>
-      
-        <label for="bedrooms">Number of Bedrooms:</label>
-        <select id="bedrooms" name="bedrooms">
-          <option value="">Select an option</option>
-          <option value="1">1 Bedroom</option>
-          <option value="2">2 Bedrooms</option>
-          <option value="3">3 Bedrooms</option>
-          <option value="4">4 Bedrooms</option>
-        </select>
-      
-        <label for="bathrooms">Number of Bathrooms:</label>
-        <select id="bathrooms" name="bathrooms">
-          <option value="">Select an option</option>
-          <option value="1">1 Bathroom</option>
-          <option value="2">2 Bathrooms</option>
-          <option value="3">3 Bathrooms</option>
-          <option value="4">4 Bathrooms</option>
-        </select>
-      
-        <label for="price">Price Range:</label>
-        <select id="price" name="price">
-          <option value="">Select an option</option>
-          <option value="0-500">$0 - $500</option>
-          <option value="500-1000">$500 - $1000</option>
-          <option value="1000-1500">$1000 - $1500</option>
-          <option value="1500-2000">$1500 - $2000</option>
-          <option value="2000+">$2000+</option>
-        </select>
-      
-        <label for="furnished">Furnished:</label>
-        <input type="checkbox" id="furnished" name="furnished">
-      
-        <label for="parking">Parking:</label>
-        <input type="checkbox" id="parking" name="parking">
-      
-        <label for="laundry">Laundry:</label>
-        <input type="checkbox" id="laundry" name="laundry">
-      
-        <label for="pets">Pets Allowed:</label>
-        <input type="checkbox" id="pets" name="pets">
-      
-        <label for="pool">Swimming Pool:</label>
-        <input type="checkbox" id="pool" name="pool">
-      
-        <button type="submit">Filter Results</button>
+  <header class="header" data-header>
+
+    <div class="overlay" data-overlay></div>
+
+      <div class="navbar-bottom">
+            <ul class="navbar-list">
+
+              <li>
+                <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+              </li>
+
+            </ul>
+          </div>
+
+        </nav>
+
+
       </div>
-      
-      
+    </div>
+
+  </header>
+
+	<h1>Student Housing Search</h1>
+	<form action="filter_output.html">
+        <label for="location">On-Campus or Off-Campus:</label>
+        <select id="location" name="location">
+            <option value="on-campus">On-Campus</option>
+            <option value="off-campus">Off-Campus</option>
+        </select>
+    
+        <label for="budget">Monthly budget:</label>
+        <input type="number" id="budget" name="budget" placeholder="Enter your monthly budget" min="0" required>
+    
+        <label for="bedrooms">Number of bedrooms:</label>
+        <select id="bedrooms" name="bedrooms">
+            <option value="0">Studio/1</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4+</option>
+        </select>
+    
+        <label for="bathrooms">Number of bathrooms:</label>
+        <select id="bathrooms" name="bathrooms">
+            <option value="0">Shared</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3+</option>
+        </select>
+
+        <label for="distance">Distance from campus (miles):</label>
+	    <input type="number" id="distance" name="distance" placeholder="Enter distance from campus in miles" min="0" required>
+    
+        <label for="amenities">Amenities:</label>
+        <ul>
+            <li><input type="checkbox" id="furnished" name="furnished" value="furnished"><label for="furnished">Furnished</label></li>
+            <li><input type="checkbox" id="utilities" name="utilities" value="utilities"><label for="utilities">Utilities included</label></li>
+            <li><input type="checkbox" id="parking" name="parking" value="parking"><label for="parking">Parking available</label></li>
+            <li><input type="checkbox" id="pet-friendly" name="pet-friendly" value="pet-friendly"><label for="pet-friendly">Pet-friendly</label></li>
+        </ul>
+    
+        <label for="move-in-date">Move-in date:</label>
+        <input type="date" id="move-in-date" name="move-in-date" required>
+    
+        <label for="lease-duration">Lease duration:</label>
+        <select id="lease-duration" name="lease-duration">
+            <option value="3">3 months</option>
+            <option value="6">6 months</option>
+            <option value="9">9 months</option>
+            <option value="12">12 months</option>
+            <option value="12+">12+ months</option>
+        </select>
+    
+        <input type="submit" value="Show Results">
+    </form>
+    
 </body>
 </html>
+

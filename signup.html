@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Form</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		
+		form {
+			background-color: #fff;
+			padding: 40px;
+			border-radius: 8px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+			max-width: 500px;
+			margin: 0 auto;
+		}
+		
+		h1 {
+			text-align: center;
+			color: #333;
+			font-size: 36px;
+			margin-bottom: 30px;
+			text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #666;
+			font-weight: bold;
+			font-size: 18px;
+		}
+		
+		
+		input[type="text"], input[type="email"], input[type="password"], select, input[type="checkbox"] {
+			width: 100%;
+			padding: 15px;
+			border-radius: 4px;
+			border: none;
+			background-color: #f2f2f2;
+			margin-bottom: 20px;
+			box-sizing: border-box;
+			font-size: 16px;
+			color: #333;
+		}
+		
+		input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus, input[type="checkbox"]:focus {
+			outline: none;
+			background-color: #fff;
+			box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+		}
+		
+		input[type="submit"] {
+			background-color: #5cb85c;
+			color: white;
+			padding: 15px 20px;
+			border: none;
+			cursor: pointer;
+			border-radius: 4px;
+			font-size: 18px;
+			font-weight: bold;
+			text-transform: uppercase;
+			transition: background-color 0.2s ease-in-out;
+			margin-top: 20px;
+			box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+		}
+		
+		input[type="submit"]:hover {
+			background-color: #4cae4c;
+		}
+		
+		.error {
+			color: red;
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+		
+		.logo {
+			display: block;
+			margin: 0 auto 30px auto;
+			width: 80px;
+			height: 80px;
+			background-color: #fff;
+			border-radius: 50%;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+			text-align: center;
+			line-height: 80px;
+			font-size: 48px;
+			color: #5cb85c;
+			text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+		}
+		
+		.bg-green {
+			background-color: #5cb85c;
+		}
+		
+		.bg-blue {
+			background-color: #337ab7;
+		}
+		
+		.bg-purple {
+			background-color: #6b55c9;
+	
+        }
+	
+	.bg-orange {
+		background-color: #f0ad4e;
+	}
+	
+	.bg-red {
+		background-color: #d9534f;
+	}
+	
+	.color-white {
+		color: #fff;
+	}
+	
+	.color-black {
+		color: #333;
+	}
+	
+	.signup {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		background-image: linear-gradient(to right, #5cb85c , #f0ad4e);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: relative;
+	}
+	
+	.signup:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.4);
+	}
+	
+	.signup__form {
+		background-color: #fff;
+		padding: 40px;
+		border-radius: 8px;
+		box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+		max-width: 500px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+	}
+	
+	.signup__heading {
+		color: #fff;
+		font-size: 36px;
+		text-align: center;
+		margin-bottom: 30px;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+		position: relative;
+		z-index: 2;
+		margin-top: 50px;
+	}
+	
+	.signup__subheading {
+		color: #fff;
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 50px;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+		position: relative;
+		z-index: 2;
+	}
+	
+	.signup__field {
+		position: relative;
+		margin-bottom: 20px;
+	}
+	
+	.signup__field label {
+		display: block;
+		margin-bottom: 10px;
+		color: #666;
+		font-weight: bold;
+		font-size: 18px;
+		position: relative;
+		z-index: 2;
+	}
+	
+	.signup__field input[type="text"], .signup__field input[type="email"], .signup__field input[type="password"], .signup__field select, .signup__field input[type="checkbox"] {
+		width: 100%;
+		padding: 15px;
+		border-radius: 4px;
+		border: none;
+		background-color: #f2f2f2;
+		margin-bottom: 20px;
+		box-sizing: border-box;
+		font-size: 16px;
+		color: #333;
+		position: relative;
+		z-index: 2;
+	}
+	
+	.signup__field input[type="text"]:focus, .signup__field input[type="email"]:focus, .signup__field input[type="password"]:focus, .signup__field select:focus, .signup__field input[type="checkbox"]:focus {
+		outline: none;
+		background-color: #fff;
+		box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+		position: relative;
+		z-index:
+		2;
+	}
+	
+	.signup__field select {
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23888'%3E%3Cpath d='M7.4,10.6l4.6,4.6c0.2,0.2,0.5,0.2,0.7,0l4.6-4.6c0.4-0.4,0.1-1-0.4-1H7.8C7.3,9.6,7,10.2,7.4,10.6z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right 10px center;
+		background-size: 24px;
+		padding-right: 40px;
+	}
+	
+	.signup__field input[type="checkbox"] + label {
+		margin-left: 10px;
+		position: relative;
+		z-index: 2;
+	}
+	
+	.signup__field input[type="submit"] {
+		background-color: #5cb85c;
+		color: #fff;
+		padding: 15px;
+		border-radius: 4px;
+		border: none;
+		cursor: pointer;
+		font-size: 18px;
+		transition: background-color 0.3s ease;
+		position: relative;
+		z-index: 2;
+	}
+	
+	.signup__field input[type="submit"]:hover {
+		background-color: #449d44;
+	}
+	
+	.signup__field--half {
+		width: 48%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	.signup__field--half:first-of-type {
+		margin-right: 4%;
+	}
+	
+	@media (max-width: 768px) {
+		.signup__form {
+			max-width: 90%;
+		}
+		
+		.signup__field--half {
+			width: 100%;
+			display: block;
+		}
+		
+		.signup__field--half:first-of-type {
+			margin-right: 0;
+		}
+	}
+</style>
+</head>
+<body>
+	<div class="signup">
+		<h1 class="signup__heading">Sign Up Now</h1>
+		<p class="signup__subheading">Join our community to find home away from home!!</p>
+		<form class="signup__form" action="#" method="post">
+			<div class="signup__field">
+				<label for="first_name">First Name</label>
+				<input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
+			</div>
+			<div class="signup__field">
+				<label for="last_name">Last Name</label>
+				<input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
+			</div>
+			<div class="signup__field">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" placeholder="Enter your email" required>
+			</div>
+			<div class="signup__field">
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" placeholder="Enter your password"
+                required>
+</div>
+<div class="signup__field signup__field--half">
+<label for="phone_number">Phone Number</label>
+<input type="tel" id="phone_number" name="phone_number" placeholder="Enter your phone number" required>
+</div>
+<div class="signup__field signup__field--half">
+<label for="postal_code">Postal Code</label>
+<input type="text" id="postal_code" name="postal_code" placeholder="Enter your postal code" required>
+</div>
+<div class="signup__field" >
+<!-- <input type="submit" value="Sign Up" > -->
+<a href="index.html" >Sign up</a>
+</div>
+</form>
+</div>
+
+</body>
+</html>

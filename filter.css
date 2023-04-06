@@ -1,0 +1,102 @@
+/* Form styles */
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"],
+  form select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+  
+  form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M1.3 5.7l8 8c.4.4 1 .4 1.4 0l8-8c.4-.4.4-1 0-1.4l-1.4-1.4c-.4-.4-1-.4-1.4 0L10 11.6 3.7 5.3c-.4-.4-1-.4-1.4 0l-1.4 1.4c-.4.4-.4 1 0 1.4z'/%3E%3C/svg%3E") no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 10px;
+    padding-right: 30px;
+  }
+  
+  form input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  form button[type="submit"] {
+    background-color: #006699;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #00557e;
+  }
+  
+  /* Filter styles */
+  .filter-container {
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .filter-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .filter-container .filter-option {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .filter-container .filter-label {
+    margin-right: 10px;
+    font-weight: 500;
+  }
+  
+  .filter-container input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    margin-right: 5px;
+  }
+  
+  .filter-container button {
+    background-color: #006699;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-container button:hover {
+    background-color: #00557e;
+  }
+  
