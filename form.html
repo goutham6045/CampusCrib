@@ -99,31 +99,59 @@
 </head>
 <body>
 	<h1>Student Housing Search</h1>
-	<form>
-		<label for="university">University:</label>
-		<input type="text" id="university" name="university" placeholder="Enter your university name" required>
-
-		<label for="budget">Monthly budget:</label>
-		<input type="number" id="budget" name="budget" placeholder="Enter your monthly budget" min="0" required>
-
-		<label for="bedrooms">Number of bedrooms:</label>
-		<select id="bedrooms" name="bedrooms">
-			<option value="0">Studio/1</option>
-			<option value="1">1</option>
+	<form action="index.html">
+        <label for="location">On-Campus or Off-Campus:</label>
+        <select id="location" name="location">
+            <option value="on-campus">On-Campus</option>
+            <option value="off-campus">Off-Campus</option>
+        </select>
+    
+        <label for="budget">Monthly budget:</label>
+        <input type="number" id="budget" name="budget" placeholder="Enter your monthly budget" min="0" required>
+    
+        <label for="bedrooms">Number of bedrooms:</label>
+        <select id="bedrooms" name="bedrooms">
+            <option value="0">Studio/1</option>
+            <option value="1">1</option>
             <option value="2">2</option>
-	    <option value="3">3 or more</option>
-	  </select>
-	  
-	  <label for="amenities">Preferred amenities:</label>
-	  <ul id="amenities">
-	    <li><input type="checkbox" name="amenity" value="wifi"> Free Wi-Fi</li>
-	    <li><input type="checkbox" name="amenity" value="laundry"> On-site laundry</li>
-	    <li><input type="checkbox" name="amenity" value="gym"> Fitness center</li>
-	    <li><input type="checkbox" name="amenity" value="parking"> Parking</li>
-	  </ul>
-	  
-	  <input type="submit" value="Find Housing">
-	</form>
+            <option value="3">3</option>
+            <option value="4">4+</option>
+        </select>
+    
+        <label for="bathrooms">Number of bathrooms:</label>
+        <select id="bathrooms" name="bathrooms">
+            <option value="0">Shared</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3+</option>
+        </select>
+
+        <label for="distance">Distance from campus (miles):</label>
+	    <input type="number" id="distance" name="distance" placeholder="Enter distance from campus in miles" min="0" required>
+    
+        <label for="amenities">Amenities:</label>
+        <ul>
+            <li><input type="checkbox" id="furnished" name="furnished" value="furnished"><label for="furnished">Furnished</label></li>
+            <li><input type="checkbox" id="utilities" name="utilities" value="utilities"><label for="utilities">Utilities included</label></li>
+            <li><input type="checkbox" id="parking" name="parking" value="parking"><label for="parking">Parking available</label></li>
+            <li><input type="checkbox" id="pet-friendly" name="pet-friendly" value="pet-friendly"><label for="pet-friendly">Pet-friendly</label></li>
+        </ul>
+    
+        <label for="move-in-date">Move-in date:</label>
+        <input type="date" id="move-in-date" name="move-in-date" required>
+    
+        <label for="lease-duration">Lease duration:</label>
+        <select id="lease-duration" name="lease-duration">
+            <option value="3">3 months</option>
+            <option value="6">6 months</option>
+            <option value="9">9 months</option>
+            <option value="12">12 months</option>
+            <option value="12+">12+ months</option>
+        </select>
+    
+        <input type="submit" value="Submit">
+    </form>
+    
 </body>
 </html>
 

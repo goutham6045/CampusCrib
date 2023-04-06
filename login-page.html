@@ -1,35 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="login-page.css">
-  <script defer src="login-page.js"></script>
+	<meta charset="UTF-8">
+	<title>Login Page</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon_2.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f6f6f6;
+			font-family: Arial, sans-serif;
+		}
+		
+		.container {
+			max-width: 500px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		
+		h1 {
+			font-size: 2rem;
+			margin-bottom: 1rem;
+		}
+		
+		form {
+			background-color: #fff;
+			border-radius: 8px;
+			padding: 2rem;
+			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+			width: 100%;
+			max-width: 400px;
+		}
+		
+		label {
+			display: block;
+			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
+		}
+		
+		input[type="text"], input[type="password"] {
+			padding: 0.5rem;
+			font-size: 1.2rem;
+			border: none;
+			border-radius: 4px;
+			margin-bottom: 1rem;
+			width: 100%;
+		}
+		
+		button[type="submit"] {
+			padding: 0.5rem 1rem;
+			font-size: 1.2rem;
+			border: none;
+			border-radius: 4px;
+			background-color: #2644c5;
+			color: #fff;
+			cursor: pointer;
+		}
+		
+		button[type="submit"]:hover {
+			background-color: #25971b;
+		}
+	</style>
 </head>
-
 <body>
-  <main id="main-holder">
-    <h1 id="login-header">Login</h1>
-    
-    <div id="login-error-msg-holder">
-      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
-    </div>
-    
-    <!-- <form id="login-form" action="index.html">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-      <input type="submit" value="Login" id="login-form-submit">
-    </form> -->
-
-    <form action="index.html">
-      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
-      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-      <input type="submit" value="login" >
-    </form>
   
-  </main>
+	<div class="container">
+	
+    <h1>Login</h1>
+      <input type="text" placeholder="Username" id="username">
+      <input type="password" placeholder="Password" id="password">
+      <button type="submit" onclick="login()">Log In</button>
+	</div>
+  <script src="login-page.js"></script>
 </body>
-
 </html>
