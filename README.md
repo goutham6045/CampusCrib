@@ -9,7 +9,7 @@
   <br />
   <br />
 
-  <a href="https://github.com/goutham6045/CampusCrib.git"><strong>➥ Live Demo</strong></a>
+ // <a href="https://github.com/goutham6045/CampusCrib.git"><strong>➥ Link to the GitHub Code </strong></a>
 
 </div>
 
